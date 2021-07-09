@@ -5,7 +5,7 @@
  * - Nên dùng cái nào, trong trường hợp nào
  */
 
-// var 
+// var
 
 // console.log(fullName); // Work (undefined)
 // // Undefined : có tồn tại chả qua là chưa được gán giá trị thôi
@@ -26,7 +26,6 @@
 
 // showErrorWithError();
 
-
 // let
 // console.log(age);
 // let age = 21;
@@ -44,11 +43,9 @@
 
 // showErrorWithError();
 
-
 //const
 
 // const birthYear; // bắt buộc phải gán giá trị khi khai báo
-
 
 /**
  * Function
@@ -94,7 +91,6 @@
 //     //     console.log(2021 - this.birthYear);
 //     // }
 
-    
 // }
 
 // // student.calcAgeNormal();
@@ -125,7 +121,6 @@
 // withoutDefaultParam();
 // withoutDefaultParam('admin');
 
-
 /**
  * Destructuring
  * - Array
@@ -150,7 +145,6 @@
 // const {name,className,age} = student;
 // console.log(name, className)
 
-
 /**
  * Template string
  */
@@ -164,25 +158,106 @@
 /**
  * Enhance object literals (Short hands syntax)
  */
-const age = 18;
- const person = {
-     name: 'QN',
-     age,
-    //  age:age,
-     calcAge : function(){
-         return 2021 - this.age;
-     }
- }
+// const age = 18;
+//  const person = {
+//      name: 'QN',
+//      age,
+//     //  age:age,
+//      calcAge : function(){
+//          return 2021 - this.age;
+//      }
+//  }
 
- console.log(person);
+//  console.log(person);
+
+/**
+ * Spread Operator(...)
+ */
+
+// const person = ['Nhu', 'Thinh', 'Giang'];
+
+// // + Use for clg array
+// console.log(...person);
+
+// // Use for copy array
+
+// let num1 = [1,2,3];
+// // let num2 = num1;
+// // // console.log(num1);
+// // // console.log(num2);
+// // num2.push(4);
+// // console.log(num2);
+// // console.log(num1);
+// // => num2 = num1 => Tham chiếu trong JS
+// let num2 = [...num1];
+
+// num2.push(4);
+// console.log(num1);
+// console.log(num2);
+
+//MErge array, concatenation
+
+// let num1 = [1,2,3];
+// let num2 = [4,5,6];
+
+// let num3 = [...num1, ...num2];
+// console.log(num3);
+
+// const obj1 = {
+//     a: 1,
+//     b: 2
+// }
+
+// let obj2 = {...obj1};
+// console.log(obj1);
+// console.log(obj2);
+
+// const user = ['nhu', 'thinh', 'giang'];
+
+// const showUser = (user1, user2, user3) => console.log(user1);
+
+// showUser(...user);
+
+/**
+ * Rest params
+ */
+
+// const calcSum = (num1, num2 , num3) => console.log(num1+num2+num3);
+
+// const calcSum = (...num) => {
+//   let sum = 0;
+//   num.forEach((num) => {
+//     sum += num;
+//   });
+//   console.log(sum);
+// };
+
+// calcSum(1, 2, 3, 4, 5, 6, 9);
+
+// import { getLocalStorage, setLocalStorage } from "./utils.js";
 
 
+/**
+ * Class: bản chất vẫn là 1 function, chỉ có js custom lại cho special hơn mà thôi
+ */
+
+// const Person = class{
+
+// }
 
 
+// class Person{
+//     constructor(firstName, lastName, birthYear){
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.birthYear = birthYear
+//     }
 
+//     calcAge(){
+//         return 2021 - this.birthYear;
+//     }
+// }
 
-
-
-
-
+// const nhu = new Person("Nguyen","Nhu",2000);
+// console.log(nhu);
 
